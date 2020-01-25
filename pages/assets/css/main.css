@@ -3617,7 +3617,7 @@ input, select, textarea {
 			}
 
 			#main > * > .inner > .center {
-				padding: 0px 0px 2px 0px;
+				padding: 0px 0px 50px 0px;
 				margin: 0 auto;
 				display: block;
 				margin-left: auto;
