@@ -3607,6 +3607,24 @@ input, select, textarea {
 				width: calc(100% - 6em);
 			}
 
+			#main > * > .inner > .centertogether {
+				padding: 0px 0px 0px 0px;
+				margin: 0 auto;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+			}
+
+			#main > * > .inner > .center {
+				padding: 0px 0px 2px 0px;
+				margin: 0 auto;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+			}
+
 				@media screen and (max-width: 736px) {
 
 					#main > * > .inner {
@@ -3615,6 +3633,8 @@ input, select, textarea {
 					}
 
 				}
+
+				
 
 		#main.alt {
 			background-color: transparent;

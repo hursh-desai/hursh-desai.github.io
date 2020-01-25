@@ -28,7 +28,8 @@
                     <h1>Customer Behavior Prediction</h1>
                 </header>
                 <div class="content">
-                    <p>As a part of a HSBC Hackathon we used </p>
+                    <p>As a part of a HSBC Hackathon we created a simple feedforward neaural network to predict customer
+                        behavior</p>
                     <p>
                         <font color="#92c4eb">
                             <a href="https://github.com/hursh-desai/Customer-Prediction-Neural-Net/blob/master/Customer%20Prediction%20Neural%20Net.ipynb"
@@ -48,23 +49,25 @@
                     <header class="major">
                         <h2>Summary</h2>
                     </header>
-                    <p>My hypothesis I was testing is that an increase in votes for the Liberal party would have a
-                        signficant influence on demographic growth and immigration. While an increase in votes for the
-                        Conservative party would increase household financial expenditure based on the power of the
-                        party within the country.</p>
-                    <p>In order to see that, I first analyzed the data on it's own, before regressing against party
-                        voting to see if there were any trends within the country to begin wtih. Then, in order to test
-                        our hypothesis, I ran regressions against the three biggest parties within Canada that have been
-                        present since 1997 (the start of the Canadian federal election data) and our three data points
-                        to see any correlations.</p>
+                    <p>For the hackathon HSBC gave us 2gbs of text files containing data on their customer transaction
+                        records, products
+                        purchased, debt info, etc. Using this data I was to develop an algorithm that predicted if a
+                        new customer would purchase a HSBC prodcut within the next 3 months. A lot of this project was
+                        simply preparing the data to be able to put into a neural network because the data we were given
+                        was very unstructured and contained both numerical and categorical data. I made the categorical
+                        data points into one-hot vectors and then fed them along with the numerical data points into a
+                        simple perceptron algorithm which gave us very good results in loss and accuracy.</p>
                 </div>
             </section>
             <section id="one">
                 <div class="inner">
-                    <p>*Still working on adding pictures and snippets of projects to the page. However, you can click
-                        the link at the top of the page
-                        to take you to the jupyter notebook I did the project in.*
+                    <p>The Pre-processing required to get data in format where I could input it into the neural network
                     </p>
+                    <img src="/images/CBP/Customer Behavior Pre-processing.png" alt="" class="center"/>
+                    <img src="/images/CBP/Customer Behavior Pre-processing 2.png" alt="" class="center"/>
+                    <p>Graph of how training & validation loss fell and accuracy rose over the iterations
+                    </p>
+                    <img src="/images/CBP/Customer Behavior Results.png" alt="" class="center"/>
                 </div>
             </section>
             <section id="contact">
