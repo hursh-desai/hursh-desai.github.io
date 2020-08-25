@@ -16,7 +16,7 @@
         <header id="header" class="alt style2">
             <a href="/index.html" class="logo"><strong>Hursh Desai Portfolio</strong></a>
             <nav>
-                <a href="Hursh Desai - Resume.pdf">Resume</a>
+                <!-- <a href="Hursh Desai - Resume.pdf">Resume</a> -->
             </nav>
         </header>
         <section id="banner" class="style2">
@@ -28,12 +28,12 @@
                     <h1>ASL Letter Translator</h1>
                 </header>
                 <div class="content">
-                    <p>Trained model to predict ASL Letter being signed through images. </p>
+                    <p>Trained deep neural network to classify ASL letters</p>
                     <p>
                         <font color="#92c4eb">
-                            <a href="https://github.com/hursh-desai/ASL-to-English-Convolutional-Neural-Net/blob/master/ASL%20Translator.ipynb"
+                            <a href="https://github.com/hursh-desai/ASL-Letter-Translator"
                                 style="text-decoration: none;">
-                                Link to the Jupyter Notebook
+                                Link to the GitHub Repo
                             </a>
                         </font>
                     </p>
@@ -55,12 +55,25 @@
                         and pre-processing the data; I trained the network using 70% of the dataset, continually tested
                         its performance against a validation set of 15% of the dataset to make sure the network
                         maintains a high accuracy without getting too overfit to this data, and finally used a testing
-                        set of 15% of the dataset to provide an unbiased evaluation of the final model fit.
+                        set of 15% of the dataset to provide an unbiased evaluation of the final model fit. 
+                    </p>  
+                    <p>
+                        I took this project a step further because I wanted to learn how real world AI products were built, 
+                        i.e. using a trained model to classify new user-generated data. To do this I created a 
+                        web app where the user could sign a specific ASL letter and then press the Predict button. 
+                        The Predict button would send that image to server, use the pre-trained model to classify what letter 
+                        the user was signing, and then display that on the web page.
+                    </p>
+                    <p>
+                        The link to the web app is in the GitHub repository above.
                     </p>
                 </div>
             </section>
             <section id="one">
                 <div class="inner">
+                    <p>Loading Data into Jupyter Notebook
+                    </p>
+                    <img src="/images/Conv_Net/Conv Net Loading Data.png" alt="" class="center"/>
                     <p>Examples of ASL images that I trained Neural Network on
                     </p>
                     <img src="/images/Conv_Net/Display Conv Net Pictures.png" alt="" class="center"/>
@@ -73,7 +86,7 @@
                     <p>Graph of how training & validation loss fell and accuracy rose over the iterations
                     </p>
                     <img src="/images/Conv_Net/Conv Net Results.png" alt="" class="center"/>
-                    <p>Accuracy of Neural Network on unbiased testing data
+                    <p>Accuracy of Neural Network on unbiased testing data and then saving the model
                     </p>
                     <img src="/images/Conv_Net/Conv Net Testing Results.png" alt="" class="center"/>
                 </div>
