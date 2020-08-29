@@ -2992,7 +2992,7 @@ input, select, textarea {
 				.spotlights > section > .content > .inner {
 					margin: 0 auto;
 					max-width: 100%;
-					width: 65em;
+					width: 65em;	
 				}
 
 			.spotlights > section:nth-child(2n) {
@@ -3001,6 +3001,13 @@ input, select, textarea {
 				-ms-flex-direction: row-reverse;
 				flex-direction: row-reverse;
 				background-color: #333856;
+			}
+
+			.spotlights > section > .content > .inner > header{
+				margin: 0 auto;
+				/* display:inline-block; */
+				max-width: 100%;
+				width: 65em;
 			}
 
 				.spotlights > section:nth-child(2n) > .content {

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Hursh - Personal Projects</title>
+	<title>Hursh - Papers</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -22,40 +22,18 @@
 		<section id="banner" class="style2">
 			<div class="inner">
 				<span class="image">
-					<img src="images/pic07.jpg" alt="" />
+					<img src="images/pic04.jpg" alt="" />
 				</span>
 				<header class="major">
-					<h1>Other Hobbies</h1>
+					<h1>Papers</h1>
 				</header>
 				<div class="content">
-					<p>Used Personal Projects as a way to learn skills and concepts such as Data Visualization, API
-						Integration, Full Stack App Development, etc.
-						that I otherwise couldn't have learned in school.
+					<p>Research Papers I have written about some interesting topics.
 					</p>
 				</div>
 			</div>
 		</section>
-
 		<div id="main">
-
-			<section id="one">
-				<div class="inner">
-					<header class="major">
-						<h2>Summary</h2>
-					</header>
-					<p>When I couldn't find classes to teach me skills I was interested in learning I chose a project to
-						undertake that would teach me the those skills.</p>
-					<p>I wanted to know what fully developing a mobile app from top to bottom required and so I decided
-						to build a mobile app in Flutter. I used Google Firestore a NoSQL Database as my backend
-						database and made RESTful API calls to pull and update data. I also fully designed the UI and UX
-						for the app in Flutter by myself</p>
-					<p>Doing a bit of research into the Data Analysis field made me realize that a large part of the
-						data collection process is done through API calls. Thus in order to learn more about how they
-						were I decided to use the Instagram and Twitter Web API's to build social media audience
-						analyzer bots that return actionable information about your audience.</p>
-				</div>
-			</section>
-			<!-- Two -->
 			<section id="two" class="spotlights">
 				<section>
 					<a href="generic.html" class="image">
@@ -64,14 +42,26 @@
 					<div class="content">
 						<div class="inner">
 							<header class="major">
-								<h3>Flutter App</h3>
+								<h3>Machine Learning Course</h3>
 							</header>
-							<p>Designed app in Flutter to graph public sentiment on important subjects over time, built
-								out app’s backend NoSQL
-								database and self-taught graphic design and Google’s Material Design in order to create
-								an attractive UI/UX with Dart</p>
+							<p>I took a Machine Learning course in NYU Shanghai and these are the 
+								<font color="#92c4eb">
+									<a href="https://github.com/hursh-desai/Decision-Models-and-Analytics-Projects">
+										projects
+									</a>
+								</font> 
+								I had to build in order to learn certain important concepts.
+								
+								I implemented simple ML models such as Support Vector Machines (SVM) and Linear Regression in Numpy. 
+								Then I utilized PyTorch to build the more complicated Deep Learning models such as CNN's, RNN's, as well as simple
+								perceptron algorithms. We also learned how to appropriately optimize these models to get higher training, validation, and 
+								test accuracy.
+							</p> 
+							<p>Used the classic CIFAR-10 dataset to classify images into 10 different classes. Implemented a Recurrent Neural Network to produce new dinosaur names given a list of already
+								existing dinoasur names.</p>
 							<ul class="actions">
-								<li><a href="https://github.com/hursh-desai/App" class="button">Learn more</a></li>
+								<li><a href="https://github.com/hursh-desai/Machine-Learning-Class-Projects/blob/master/Convolutional%20Neural%20Net/Convolutional%20Network%20Assignment.ipynb"
+										class="button">Jupyter Notebook</a></li>
 							</ul>
 						</div>
 					</div>
@@ -83,22 +73,73 @@
 					<div class="content">
 						<div class="inner">
 							<header class="major">
-								<h3>Social Media Audience Analyzers</h3>
+								<h3>Regression and Multivariate Data Analysis</h3>
 							</header>
-							<p>Built <font color="#92c4eb">
-									<a href="https://github.com/hursh-desai/Twitter-Audience-Analyzer">
-										Twitter
-									</a>
-								</font> and <font color="#92c4eb">
-									<a href="https://github.com/hursh-desai/Instagram-Audience-Analyzer">
-										Instagram
-									</a>
-								</font> audience analyzers using their respective API's. Using these social media
-								managment programs you would be able to see who liked your last post, who do you follow
-								that doesn't follow you, who do you follow that isn't very active, and much more.</p>
-							<!-- <ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul> -->
+							In my Regression and Multivariate Data Analysis class I created 5 datasets of different data types and
+						then used appropriate regression models to interpret underlying trends in the respective data sets. The class was also heavily focused
+						on how to interpret the regression diagnostics that tell you whether the assumptions we make in order to use regression are being met or not.
+
+				</p>
+							<ul class="actions">
+								<li><a href="https://github.com/hursh-desai/Machine-Learning-Class-Projects/blob/master/RNN/Recurrent%20Neural%20Networks%20Homework.ipynb"
+										class="button">Jupyter Notebook</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<a href="generic.html" class="image">
+						<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>Profit Optimization Under Uncertainty</h3>
+							</header>
+							<p> I took a Decision Models and Analytics class where I built <font color="#92c4eb">
+								<a href="https://github.com/hursh-desai/Machine-Learning-Class-Projects">
+									models
+								</a>
+							</font> in Excel to solve important
+							optimization and simulation business problems.
+	
+							Used Simplex Solver to solve linear programming optimization models & GRG Nonlinear or
+							Evolutionary Solver to solve non-linear optimization models.
+	
+							Introduced Crystal Ball for simulation modeling. Simulation models for normal, log-normal,
+							bernoulli etc. distributions. Included constraints and optimization for certain variables, i.e.
+							simulating profit distribution while minimizing costs under demand uncertainty.
+							
+							<p>In this project I used Crystal Ball to simulate the profit distribution of a particular
+								airline flight while minimizing costs. I had to use simulation modeling because demand
+								was uncertain. I used a uniform distribution and a given mean and st. dev. to model the
+								demand; and I used a binomial distribution to model how many passangers who bought a
+								ticket actually showed up. This airline could overbook for both coach and business class
+								so I had to optimize the profit distribution through the # of tickets sold given that
+								there was a cost for bumping a passanger.</p>
+							<ul class="actions">
+								<li><a href="https://github.com/hursh-desai/Decision-Models-and-Analytics-Projects/blob/master/Project%205.pdf"
+										class="button">Project Paper</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<a href="generic.html" class="image">
+						<img src="images/pic09.jpg" alt="" data-position="top center" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>Projects in Programming</h3>
+							</header>
+							<p>My Projects in Programming class taught me useful skills or tools to work with APIs and the data that we can extract from them through weekly labs.
+					This project based class culminated in fully functioning web app as our final project using all the skills we learned throughout the semester.
+				</p>
+							<ul class="actions">
+								<li><a href="https://github.com/hursh-desai/Machine-Learning-Class-Projects/blob/master/RNN/Recurrent%20Neural%20Networks%20Homework.ipynb"
+										class="button">Jupyter Notebook</a></li>
+							</ul>
 						</div>
 					</div>
 				</section>
