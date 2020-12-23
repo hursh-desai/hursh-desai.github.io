@@ -2,15 +2,16 @@
 <html>
 
 <head>
-    <title>RoboSimP - Hursh Desai Portfolio</title>
+    <title>Candian Election Analysis - Hursh Desai Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="shortcut icon" href="/images/favicon.ico">
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-    <meta name="description" content="Developed a simple data visualization tool to exhibit how Robo-Trading algorithms 
-    can be used to inform long and short stock positions."/>
+	<meta name="description" content="Explored the relationship between
+    Canadian federal elections results vs. demographic, immigration, and household financial
+    expenditure within Canada through deep data analysis/visualization."/>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179499923-1"></script>
@@ -26,24 +27,26 @@
 <body class="is-preload">
 
     <div id="wrapper">
-        <header id="header" class="alt style4">
+        <header id="header" class="alt style3">
             <a href="/index.html" class="logo"><strong>Hursh Desai Portfolio</strong></a>
             <nav>
                 <a href="Hursh Desai - Resume.pdf">Resume</a>
             </nav>
         </header>
-        <section id="banner" class="style4">
+        <section id="banner" class="style3">
             <div class="inner">
                 <header class="major">
-                    <h1>RoboSimP</h1>
+                    <h1>Candian Election Analysis</h1>
                 </header>
                 <div class="content">
-                    <p>Developed simple tool visualizing how Robo-Trading algorithms can inform long and short stock positions.</p>
+                    <p>I was interested in seeing the relationship between
+                        Canadian federal elections results and demographic, immigration, and household financial
+                        expenditure within Canada.</p>
                     <p>
                         <font color="#92c4eb">
-                            <a href="https://robosimp.herokuapp.com/"
+                            <a href="https://github.com/hursh-desai/Canadian-Election-Results-Demographic-Effects-Analysis/blob/master/Canadian%20Election%20Project.ipynb"
                                 style="text-decoration: none;">
-                                Link to Web App
+                                Link to the Jupyter Notebook
                             </a>
                         </font>
                     </p>
@@ -58,28 +61,43 @@
                     <header class="major">
                         <h2>Summary</h2>
                     </header>
-                    <p>The overarching goal of my Projects in Programming class was to create a fully functioning web application that would
-                        interact with at least one public API. For my project I chose to create a website that people could go on to learn how 
-                        certain robotic trading algorithms worked. I implemented two robotic trading strategies: Moving Avg & Counter Trend. People can  
-                        change the parameters of these algorithms to see how it affects the long and short term positions the algorithm would take. These 
-                        decisions by the algorithm are visualized in an interactive graph and the Sharpe ratio is given as a proxy for how successful the 
-                        yield of the chosen parameters would be. I used the yfinance API for the financial data and implemented the visualization component 
-                        using the bokeh library.
-                        
-                    </p>
+                    <p>My hypothesis I was testing is that an increase in votes for the Liberal party would have a
+                        signficant influence on demographic growth and immigration. While an increase in votes for the
+                        Conservative party would increase household financial expenditure based on the power of the
+                        party within the country.</p>
+                    <p>In order to see that, I first analyzed the data on it's own, before regressing against party
+                        voting to see if there were any trends within the country to begin wtih. Then, in order to test
+                        our hypothesis, I ran regressions against the three biggest parties within Canada that have been
+                        present since 1997 (the start of the Canadian federal election data) and our three data points
+                        to see any correlations.</p>
                 </div>
             </section>
             <section id="one">
                 <div class="inner">
-                    <p>Splash Screen
-                    </p>
-                    <img src="/images\RoboSimp\splash_screen.png" alt="" class="center"/>
-                    <p>Simulating Using Moving Avg. Strategy
-                    </p>
-                    <img src="/images\RoboSimp\moving_avg.png" alt="" class="center"/>
-                    <p>Simulating Using Counter Trend Strategy
-                    </p>
-                    <img src="/images\RoboSimp\counter_trend.png" alt="" class="center"/>
+                    <p>Pre-processing to correctly stucture data, make data easier to understand, and to make later data
+                        visualization and analysis easier</p>
+                    <img src="/images/CEA/CEA Data Cleaning 1.png" alt="" class="centertogether"/>
+                    <img src="/images/CEA/CEA Data Cleaning 2.png" alt="" class="center"/>
+                    <p>Pre-liminary Visualizations just to see data</p>
+                    <img src="/images/CEA/CEA Visualization.png" alt="" class="center"/>
+                    <p>Cross-sectional Data Visualization to see the differences in certain variables throughout Canada's provinces</p>
+                    <img src="/images/CEA/CEA Pie Graph 1.png" alt="" class="centertogether"/>
+                    <img src="/images/CEA/CEA Pie Graph 2.png" alt="" class="centertogether"/>
+                    <img src="/images/CEA/CEA Pie Graph 3.png" alt="" class="center"/>
+                    <p>Time Series Data Visualization to see the changes in certain variables over time</p>
+                    <img src="/images/CEA/CEA Line Graph 1.png" alt="" class="centertogether"/>
+                    <img src="/images/CEA/CEA Line Graph 2.png" alt="" class="center"/>
+                    <p>Merging dataframe with variables we were interested in analyzing with election results</p>
+                    <img src="/images/CEA/CEA Merging.png" alt="" class="center"/>
+                    <p>Regression Results for how the Liberal Party winning affected Immigrant flows into provinces</p>
+                    <img src="/images/CEA/CEA Statistical Analysis.png" alt="" class="center"/>
+                    <p>Regression Results for how the Conservative Party winning affected Consumption</p>
+                    <img src="/images/CEA/CEA Statistical Analysis 2.png" alt="" class="center"/>
+                    <p>Small Bit of Machine Learning I included to see if I could predict Consumption using:</p>
+                    <p>1. Votes for the Liberal Party</p>
+                    <p>2. Births</p>
+                    <p>3. Immigrant Flows</p>
+                    <img src="/images/CEA/CEA Small Amount of Machine Learning.png" alt="" class="center"/>
                 </div>
             </section>
             <section id="contact">

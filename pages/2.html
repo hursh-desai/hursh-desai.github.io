@@ -2,15 +2,14 @@
 <html>
 
 <head>
-    <title>Customer Behavior Prediction - Hursh Desai Portfolio</title>
+    <title>Bet.Net</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="shortcut icon" href="/images/favicon.ico">
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-	<meta name="description" content="As a part of a HSBC Hackathon we created a simple feedforward neaural network to predict customer
-    behavior"/>
+	<meta name="description" content="During quarantine learned full stack development by making my own web app"/>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179499923-1"></script>
@@ -35,16 +34,15 @@
         <section id="banner" class="style2">
             <div class="inner">
                 <header class="major">
-                    <h1>Customer Behavior Prediction</h1>
+                    <h1>Bet.Net</h1>
                 </header>
                 <div class="content">
-                    <p>As a part of a HSBC Hackathon we created a simple feedforward neaural network to predict customer
-                        behavior</p>
+                    <p style="margin: 0px 550px 0px 0px">Designed & Built Full Stack for a Betting Web App</p>
                     <p>
                         <font color="#92c4eb">
-                            <a href="https://github.com/hursh-desai/Customer-Prediction-Neural-Net/blob/master/Customer%20Prediction%20Neural%20Net.ipynb"
+                            <a href="http://bet-net.herokuapp.com/"
                                 style="text-decoration: none;">
-                                Link to the Jupyter Notebook
+                                Link to the Web App
                             </a>
                         </font>
                     </p>
@@ -59,25 +57,148 @@
                     <header class="major">
                         <h2>Summary</h2>
                     </header>
-                    <p>For the hackathon HSBC gave us 2gbs of text files containing data on their customer transaction
-                        records, products
-                        purchased, debt info, etc. Using this data I was to develop an algorithm that predicted if a
-                        new customer would purchase a HSBC prodcut within the next 3 months. A lot of this project was
-                        simply preparing the data to be able to put into a neural network because the data we were given
-                        was very unstructured and contained both numerical and categorical data. I made the categorical
-                        data points into one-hot vectors and then fed them along with the numerical data points into a
-                        simple perceptron algorithm which gave us very good results in loss and accuracy.</p>
+                    <p>At the start of the Coronavirus quarantine I got interested in actually how hard it would be to build a fully featured web app
+                        all on my own. So I dove in head first researching, proto-typing, and learning as much as I could about the process. I chose a very
+                        bare bones approach to building this web app because I wanted to learn as much of the fundamentals as I could before I moved onto
+                        web development frameworks such as React. So I chose to build this web app in the simplest technology that I could without making it
+                        too hard. The tech stack I used was:
+                    </p>
+                    <ul>
+                        <div style="position: absolute">
+                        <h4>Front End</h4>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript (JQuery)</li>
+                        </div>
+
+                        <span style="position: absolute; left: 45%;">
+                        <h4>Back End</h4>
+                        <li>Flask</li>
+                        <li>PostgresSQL</li>
+                        </span>
+
+                        <div style="position: absolute; left: 74%">
+                        <h4>Deployment</h4>
+                        <li>Heroku</li>
+                        </div>  
+                    </ul>
+                    <p style="margin: 230px 0px 0px 0px">
+                        The idea was simple. Make a website people could go to where they could bet on anything they wanted to as long as there was someone
+                        else on the other side willing to take up the bet. The implementation of a system like this is a bit more challenging especially for 
+                        a first time web developer.
+
+                    </p>
                 </div>
             </section>
             <section id="one">
-                <div class="inner">
-                    <p>The Pre-processing required to get data in format where I could input it into the neural network
-                    </p>
-                    <img src="/images/CBP/Customer Behavior Pre-processing.png" alt="" class="centertogether"/>
-                    <img src="/images/CBP/Customer Behavior Pre-processing 2.png" alt="" class="center"/>
-                    <p>Graph of how training & validation loss fell and accuracy rose over the iterations
-                    </p>
-                    <img src="/images/CBP/Customer Behavior Results.png" alt="" class="center"/>
+                <div class="inner"> 
+                    <h1>The Database </h1>
+                        <p>Setting up and figuring out how to use a database effectively was probably the hardest part of this project. I used the
+                        <font color="#92c4eb">
+                            <a href="https://www.sqlalchemy.org/"
+                                style="text-decoration: none;">
+                                SQLAlchemy
+                            </a>
+                        </font>
+                        object-relational mapper (ORM) to create and interact with my PostgresSQL database. This allowed me to work with
+                            my database in a "pythonic" way that made it much easier for me to iterate through different versions of database organizations.
+                            It also made it easier to create the different many-to-many and many-to-one relationships necessary to make the bet or event
+                            specific queries I was making. Lastly using the alembic package made database migrations to new or old database versions seamless.
+                        </p>
+
+                        <img src="/images/bet.net/model_1.png" style="width: 100%;
+                        max-width: 500px;
+                        height: auto;"/>
+
+                        <img src="/images/bet.net/model_2.png" style="width: 100%;
+                        max-width: 600px;
+                        height: auto;"/>
+                        <div>
+                        <span style='font-size:100px; position: relative; left: 46%;'>&#8595;</span>
+                        </div>
+                        <img src="/images/bet.net/database_erd.png" class="image" style="max-width: 600px;"/>
+                    <h1>The Server</h1>
+                        <p>Every function that involved server side operation was mapped to a fetch function that would hit an endpoint on my Flask server.
+                            The example below shows how creating an event works. The Create button on the hompepage had its onclick attribute mapped to this 
+                            asynchronous create_event() function. This function (left image) uses the fetch api to send the inputted values for event name and 
+                            moderator name to the /create_event endpoint with a POST request. Then on the server (right image) we query 
+                            the user and event objects/rows corresponding to the data sent, check to make sure that the inputs are valid, and then create the
+                            event in the database. If the input are not valid I send back an error that can be displayed right on the page and if the event is
+                            created I redirect them to the newly created event page for that event.
+                            
+                            </p>
+                        <div>
+                        <img src="/images/bet.net/create_event_js.png" style="width: 100%;
+                        max-width: 400px;
+                        height: auto;"/>
+                        <img src="/images/bet.net/create_event.png" style="width: 100%;
+                        max-width: 635px;
+                        height: auto;"/>
+                        </div>
+                        <p>And this is how a page on my website is shown as opposed to a server side function. This is the code for a user's page that acts as the control
+                            center for all of your bets if you are viewing your own user page. It immediately queries all of the data necessary to display the user's page 
+                            from the database. Then it checks to see if the user's page you are navigating to is the same user that is currently logged in. If it is then it
+                            sets the owner boolean variable to True and if it isn't it sets it to False. Based on this variable the html that is served either includes or 
+                            excludes the ability to agree to or reject another person's acceptance of a bet.
+                        </p>
+                        <img src="/images/bet.net/user_page.png" class="image" style="width: 100%;
+                        max-width: 650px;
+                        height: auto;"/>
+                    <h1>This is a Bet</h1>
+                        <div style="padding: 20px;">
+                            <img id='bet-img' src="/images/bet.net/bet.png" style=" width: 100%; max-width: 600px; height: auto; float: left; flex-wrap: wrap;"/>
+                                <ol style="font-size: .8em; display: flex; flex-wrap: wrap; width: 100%; max-width: 573px; height: auto;">
+                                    <li>Event Name: Tells you the event this bet was made under and you can click it to go to the event page.</li>
+                                    <li>Bet Amount: The amount of money the creator of this bet is willing to put behind their position.</li>
+                                    <li>Position: The bet creator's position on which way they think the event is going to go.</li>
+                                    <li>Agree: A button you can press to show you are willing to take the other side of this bet.</li>
+                                    <li>Indicator: A small box that lights up blue if you have interacted with this bet before.</li>
+                                    <li>Bet Creator: Tells you the username of the person that created this bet.</li>
+                                </ol>
+                        </div>
+                        <h1>A Short Site Walkthrough</h1>
+                        <p>As soon as you get onto the site you will see the homepage which has a list of the latest bets made. However, in order to interact
+                            with any of these bets or make any of your own you have to either Log In or Sign Up.
+                        </p>
+                        <img src="/images/bet.net/sign up.png"  class="image"/>
+                        <p>Once you are logged in you can create an event on the hompepage and input a user that should be the moderator for that event that
+                            decides which way the event is decided.
+                        </p>
+                        <img src="/images/bet.net/homepage.png" class="image"/>
+                        <p>I also implemented the ability to search for bets based on the name of the event. 
+                        </p>
+                        <img src="/images/bet.net/search.png" class="image"/>
+                        <p>This is an event page that you can reach by searching for the name of the event or clicking the event name in a bet card. 
+                            On this page you can get information on the event like who created it and who is moderating it. You also get the description of the 
+                            event and the description for what choosing Yes or No means in terms of this event.
+                        </p>
+                        <p> You also get a list of bets that have already been made under this event that you could take the other side of. Lastly you can make
+                            your own bet. You get to choose how much you want to bet and which side of the event you want to take and just click Create!
+                        </p>
+                        <img src="/images/bet.net/event.png"  class="image"/>
+                        <p>Lastly and most importantly is the user page for each user which acts as a sort of control center for all the bets that user is 
+                            involved in. Each of the three sections are individually scrollable:
+                        <ol>
+                            <li>Bets you have created</li>
+                            <li>Bets you have agreed to take the other side of and are waiting for a response</li>
+                            <li>Bets that both the creator and engagor have agreed upon and are thus finalized bets</li>
+                        </ol>
+                        <p>
+                            You only have the option to agree to or reject people taking on the other side of a bet you created if you are on your own
+                            user's page. Everything else on this page is pretty self explanatory. Once the event is decided upon by the moderator to be either
+                            yes or no, if you were correct then that bet under Finalized Bets will turn green or else if you were wrong it will turn red.
+                        </p>
+                        <img src="/images/bet.net/control center.png"  class="image"/>
+                        <h1>Conclusion</h1>
+                        <p>
+                            The arduous journey that I went through to learn the technology as I was creating using the technology was well worth it in the
+                            end. I learned a lot about the process of web development as well as about myself. In hindsight an idea of this complexity probably
+                            shouldn't have been my first step into this world but I came out the other side better from it. This project has built a lot of confidence
+                            within myself that if I have an idea I can actually manifest that idea in the real world in a way that other people can interact with it.
+                            For my next project I will be going up the tech stack to a more fully featured web development framework to ease the development process 
+                            and additionally I will try to pursue building a less complex idea. In this way I can focus on developing my skills in creating
+                            go-to-market strategies and growing the product rather than the development process.
+                        </p>
                 </div>
             </section>
             <section id="contact">
