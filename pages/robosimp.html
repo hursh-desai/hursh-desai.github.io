@@ -2,15 +2,15 @@
 <html>
 
 <head>
-    <title>Customer Behavior Prediction - Hursh Desai Portfolio</title>
+    <title>RoboSimP - Hursh Desai Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="shortcut icon" href="/images/favicon.ico">
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-	<meta name="description" content="As a part of a HSBC Hackathon we created a simple feedforward neaural network to predict customer
-    behavior"/>
+    <meta name="description" content="Developed a simple data visualization tool to exhibit how Robo-Trading algorithms 
+    can be used to inform long and short stock positions."/>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179499923-1"></script>
@@ -26,7 +26,7 @@
 <body class="is-preload">
 
     <div id="wrapper">
-        <header id="header" class="alt style2">
+        <header id="header" class="alt style4">
             <a href="/index.html" class="logo"><strong>Hursh Desai Portfolio</strong></a>
             <nav>
                 <a href="Hursh Desai - Resume.pdf"
@@ -36,17 +36,16 @@
         <section id="banner" class="style4">
             <div class="inner">
                 <header class="major">
-                    <h1>Customer Behavior Prediction</h1>
+                    <h1>RoboSimP</h1>
                 </header>
                 <div class="content">
-                    <p>As a part of a HSBC Hackathon we created a simple feedforward neaural network to predict customer
-                        behavior</p>
+                    <p>Developed simple tool visualizing how Robo-Trading algorithms can inform long and short stock positions.</p>
                     <p>
                         <font color="#92c4eb">
-                            <a href="https://github.com/hursh-desai/Customer-Prediction-Neural-Net/blob/master/Customer%20Prediction%20Neural%20Net.ipynb"
+                            <a href="https://robosimp.herokuapp.com/"
                             target="_blank"    
                             style="text-decoration: none;">
-                                Link to the Jupyter Notebook
+                                Link to Web App
                             </a>
                         </font>
                     </p>
@@ -61,25 +60,28 @@
                     <header class="major">
                         <h2>Summary</h2>
                     </header>
-                    <p>For the hackathon HSBC gave us 2gbs of text files containing data on their customer transaction
-                        records, products
-                        purchased, debt info, etc. Using this data I was to develop an algorithm that predicted if a
-                        new customer would purchase a HSBC prodcut within the next 3 months. A lot of this project was
-                        simply preparing the data to be able to put into a neural network because the data we were given
-                        was very unstructured and contained both numerical and categorical data. I made the categorical
-                        data points into one-hot vectors and then fed them along with the numerical data points into a
-                        simple perceptron algorithm which gave us very good results in loss and accuracy.</p>
+                    <p>The overarching goal of my Projects in Programming class was to create a fully functioning web application that would
+                        interact with at least one public API. For my project I chose to create a website that people could go on to learn how 
+                        certain robotic trading algorithms worked. I implemented two robotic trading strategies: Moving Avg & Counter Trend. People can  
+                        change the parameters of these algorithms to see how it affects the long and short term positions the algorithm would take. These 
+                        decisions by the algorithm are visualized in an interactive graph and the Sharpe ratio is given as a proxy for how successful the 
+                        yield of the chosen parameters would be. I used the yfinance API for the financial data and implemented the visualization component 
+                        using the bokeh library.
+                        
+                    </p>
                 </div>
             </section>
             <section id="one">
                 <div class="inner">
-                    <p>The Pre-processing required to get data in format where I could input it into the neural network
+                    <p>Splash Screen
                     </p>
-                    <img src="/images/CBP/Customer Behavior Pre-processing.png" alt="" class="centertogether"/>
-                    <img src="/images/CBP/Customer Behavior Pre-processing 2.png" alt="" class="center"/>
-                    <p>Graph of how training & validation loss fell and accuracy rose over the iterations
+                    <img src="/images\RoboSimp\splash_screen.png" alt="" class="center"/>
+                    <p>Simulating Using Moving Avg. Strategy
                     </p>
-                    <img src="/images/CBP/Customer Behavior Results.png" alt="" class="center"/>
+                    <img src="/images\RoboSimp\moving_avg.png" alt="" class="center"/>
+                    <p>Simulating Using Counter Trend Strategy
+                    </p>
+                    <img src="/images\RoboSimp\counter_trend.png" alt="" class="center"/>
                 </div>
             </section>
             <script src="assets/js/contact.js"></script>
