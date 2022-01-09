@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="shortcut icon" href="/images/favicon.ico">
+		<link rel="stylesheet" href="assets/css/blog.css" />
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179499923-1"></script>
@@ -19,13 +20,19 @@
 		<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom-container@0.5.1"></script>
 	</head>
 
-	<body class="is-preload" style="margin: 0">
+	<body class="is-preload" style="margin: 0;overflow:hidden;">
+		<div class="container">
+			<button class="btn">Post 1</button>
+			<button class="btn">Post 2</button>
+		  </div>
 		<div
 		data-zoom-on-wheel="zoom-amount: 0.001; min-scale: 0.3; max-scale: 20;"
 		data-pan-on-drag="button: left;"
-		style="height: 100vh; overflow:hidden; margin-left: -500px;">
-  
+		class="container"
+		style="height: 100vh; overflow:hidden; margin-left: -500px; display: flex;">
 	  <img style="margin:0" src="https://hursh-blog-posts.s3.us-east-2.amazonaws.com/blog_post_1.svg">
 	  </div>
+	  
+	  
 		</body>
 </html>
