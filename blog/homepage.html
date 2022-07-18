@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" href="/images/favicon.ico">
+		<link rel="stylesheet" href="blog.css">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179499923-1"></script>
+		
+		<link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+		<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-179499923-1');
+		</script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom-container@0.5.1"></script>
+	</head>
+	<body class="is-preload" style="overflow:hidden;">
+		<!-- <iframe style="position:fixed; z-index:2;"src="foundation post clip.mp4" height="576" width="1024" deletecontrols=True></iframe> -->
+		<!-- <video style="position:fixed; z-index:2; margin-top: 700px; margin-left: 150px;" width="640" height="360" autoplay loop>
+			<source src="foundation post clip.mp4" type="video/mp4">
+		  </video> -->
+		<div
+			data-zoom-on-wheel="zoom-amount: 0.001; min-scale: 0.3; max-scale: 20;"
+			data-pan-on-drag="button: left;"
+			style="width: 100%; height: 100%; overflow:hidden; position:absolute; margin: 0;">
+			<img src="https://hursh-blog-posts.s3.us-east-2.amazonaws.com/homepage.svg">
+		</div>
+		<div class="wrapper" style="position: absolute; display: flex; justify-content: space-evenly; width: 100%; margin-top: 30px;">
+			<button class="btn" onclick="location.href='1.html'">1</button>
+		</div>
+
+	</body>
+</html>
